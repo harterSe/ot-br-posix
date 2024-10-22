@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-9506b2e</span>
+   &#160;<span id="projectnumber">0.3.0-dc6b912</span>
    </div>
   </td>
  </tr>
@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0b04350e2912a71c83058c120331d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a1e476b9f45e11ec13d78732017320c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classotbr_1_1Ncp_1_1NcpHost.html#a2a1e476b9f45e11ec13d78732017320c">SetThreadEnabled</a> (bool aEnabled, const AsyncResultReceiver aReceiver) override</td></tr>
 <tr class="separator:a2a1e476b9f45e11ec13d78732017320c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd90cc9144be9bb1a635b4c289527ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classotbr_1_1Ncp_1_1NcpHost.html#abd90cc9144be9bb1a635b4c289527ff4">SetCountryCode</a> (const std::string &amp;aCountryCode, const AsyncResultReceiver &amp;aReceiver) override</td></tr>
+<tr class="separator:abd90cc9144be9bb1a635b4c289527ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d407eb00d5bf7d98d958ba49e797f3b"><td class="memItemLeft" align="right" valign="top">CoprocessorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classotbr_1_1Ncp_1_1NcpHost.html#a8d407eb00d5bf7d98d958ba49e797f3b">GetCoprocessorType</a> (void) override</td></tr>
 <tr class="separator:a8d407eb00d5bf7d98d958ba49e797f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a876473d36f2169cecfb94c3bf8981ed4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classotbr_1_1Ncp_1_1NcpHost.html#a876473d36f2169cecfb94c3bf8981ed4">GetCoprocessorVersion</a> (void) override</td></tr>
@@ -527,6 +529,56 @@ static otLogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>ConvertT
 </dl>
 
 <p>Implements <a class="el" href="../../db/d04/classotbr_1_1Ncp_1_1ThreadHost.html#a26b4c0983dbf032f5d635f1524d93b91">otbr::Ncp::ThreadHost</a>.</p>
+
+</div>
+</div>
+<a id="abd90cc9144be9bb1a635b4c289527ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd90cc9144be9bb1a635b4c289527ff4">&#9670;&nbsp;</a></span>SetCountryCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::Ncp::NcpHost::SetCountryCode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aCountryCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AsyncResultReceiver &amp;&#160;</td>
+          <td class="paramname"><em>aReceiver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method sets the country code.</p>
+<p>The country code refers to the 2-alpha code defined in ISO-3166.</p>
+<ol type="1">
+<li>If <code>aCountryCode</code> isn't valid, <code>aReceiver</code> will be invoked with error OT_ERROR_INVALID_ARGS.</li>
+<li>If the host hasn't been initialized, <code>aReceiver</code> will be invoked with error OT_ERROR_INVALID_STATE.</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCountryCode</td><td>The country code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../db/d04/classotbr_1_1Ncp_1_1ThreadHost.html#a1a3adedee59625947b2a2534d95956d6">otbr::Ncp::ThreadHost</a>.</p>
 
 </div>
 </div>
